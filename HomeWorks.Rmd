@@ -1,0 +1,204 @@
+---
+title: "Complex Network"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    css: ./style.css
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(extrafont)
+source(file = "./scripts/pre_needed_functions.R")
+source(file = "./scripts/homework1.R")
+source(file = "./scripts/homework2.R")
+source(file = "./scripts/homework3.R")
+source(file = "./scripts/homework4.R")
+```
+
+Homework 1 {.storyboard}
+===
+### A) Erdos Renyi Graph
+
+```{r}
+drawGraph(erdosRenyiGraph, homework1Layout)
+```
+
+### B) Complemente
+
+``` {r}
+drawGraph(complementeryGraph, homework1Layout)
+```
+
+
+### C) Adjecency Materix
+Matrix
+```{r}
+erdosRenyiMatrix
+```
+
+### D) Some powers of the matrix
+Matrix^2
+```{r}
+erdosRenyiMatrixPow2
+```
+Matrix^5
+```{r}
+erdosRenyiMatrixPow5
+```
+Matrix^15
+```{r}
+erdosRenyiMatrixPow15
+```
+Matrix^30
+```{r}
+erdosRenyiMatrixPow30
+```
+
+### E) Radius, Diameter and Girth
+Eccentricity
+``` {r}
+eccentricityErdosReyniGraph
+```
+Radius
+``` {r}
+radiusErdosReyniGraph
+```
+Diameter
+``` {r}
+diameterErdosReyniGraph
+```
+Girth
+``` {r}
+girthErdosReyniGraph
+```
+
+### F) Density
+Density
+``` {r}
+density
+```
+
+
+### G) Induced Graph
+```{r}
+drawGraph(inducedErdosRenyiGraph, homework1InducedGraphLayout)
+```
+
+
+Homework 2 {.storyboard}
+===
+
+### A)erdosRenyi Graph With Direction
+
+``` {r}
+erdosRenyiGraphWithDirectionInputDegree
+``` 
+
+``` {r}
+drawGraph(erdosRenyiGraphWithDirection, homework1Layout)
+```
+
+### B)Transposed
+
+```{r}
+drawGraph(erdosRenyiGraphWithDirectionTransposed, homework1Layout)
+```
+
+
+### C)Subdivision Graph
+```{r}
+drawGraph(subdivisionGraph, layout.fruchterman.reingold(subdivisionGraph))
+```
+
+***
+```{r}
+E(subdivisionGraph)
+```
+
+
+### D)Hamiltonian Cycle
+```{r}
+
+```
+
+### E)Adjecency Matrix
+```{r}
+erdosRenyiMatrixWithDirection
+```
+
+### F)Radius, Diameter and Girth
+Eccentricity
+``` {r}
+eccentricityErdosReyniGraphWithDirection
+```
+Radius
+``` {r}
+radiusErdosReyniGraphWithDirection
+```
+Diameter
+``` {r}
+diameterErdosReyniGraphWithDirection
+```
+Girth
+``` {r}
+girthErdosReyniGraphWithDirection
+```
+
+### G)Induced Graph
+```{r}
+drawGraph(inducedErdosRenyiGraphWithDirection, homework2InducedGraphLayout)
+```
+
+Homework 3 {.storyboard}
+===
+
+
+### A)
+```{r}
+headCollection
+plot(erdosRenyiGraphWithDirectionAndWeighted, edge.arrow.size=.3, layout = homework1Layout)
+
+```
+
+### B)subGraph
+
+```{r}
+plot(subEderdosRenyiGraphWithDirectionAndWeighted, edge.label=E(subEderdosRenyiGraphWithDirectionAndWeighted)$label, edge.arrow.size=.3, layout = homework1Layout)
+
+```
+
+### C)MST
+
+```{r}
+drawGraph(MSTOfErdosRenyiGraphWithDirectionAndWeighted, homework1Layout)
+```
+
+### D) Radius, Diameter, Girth
+
+Eccentricity
+``` {r}
+eccentricityerdosRenyiGraphWithDirectionAndWeighted
+```
+Radius
+``` {r}
+radiuserdosRenyiGraphWithDirectionAndWeighted
+```
+Diameter
+``` {r}
+diametererdosRenyiGraphWithDirectionAndWeighted
+```
+Girth
+``` {r}
+girtherdosRenyiGraphWithDirectionAndWeighted
+``` 
+
+Homework 4 {.storyboard}
+===
+
+### A) Multi Graph
+
+```{r}
+drawGraph(multiGraph, homework1Layout) 
+```
+

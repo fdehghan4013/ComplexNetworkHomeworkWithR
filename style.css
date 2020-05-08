@@ -1,0 +1,16 @@
+.chart-shim {
+  overflow: auto !important;
+}
+/*
+.rtl {
+  direction: rtl !important;
+}
+
+.ltr {
+  direction: ltr !important;
+}
+
+.flowing-content-shim{
+  direction: rtl !important;
+}
+*/
