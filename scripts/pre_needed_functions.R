@@ -1,4 +1,5 @@
 library(igraph)
+library(adagio)
 
 # some useful functions
 
@@ -9,7 +10,7 @@ ln <- function(n) {
 
 # plot a graph
 drawGraph <- function(graph, layout = NA) {
-  plot.igraph(graph, edge.arrow.size=.3, vertex.label=NA, layout = layout)
+  plot.igraph(graph, edge.arrow.size=.3, layout = layout)
 }
 
 powMatrix <- function(m, pow) {

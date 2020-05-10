@@ -53,5 +53,17 @@ if (length(removedV) != 0) {
   homework2InducedGraphLayout <- homework2Layout[-as.numeric(removedV),]
 }
 
+#hamilton cycle
+erdosRenyiGraphWithDirectionEdges <- numeric()
+for (e in E(erdosRenyiGraphWithDirection)) {
+  erdosRenyiGraphWithDirectionEdges <- erdosRenyiGraphWithDirectionEdges %>% 
+    c(
+      V(erdosRenyiGraphWithDirection)[get.edgelist(erdosRenyiGraphWithDirection)[e,]][1], 
+      V(erdosRenyiGraphWithDirection)[get.edgelist(erdosRenyiGraphWithDirection)[e,]][2]
+    )
+}
+
+hamiltonianGraph <- erdosRenyiGraphWithDirection
+hamiltonianEdges <- hamiltonian(erdosRenyiGraphWithDirectionEdges, cycle=TRUE)
 
 

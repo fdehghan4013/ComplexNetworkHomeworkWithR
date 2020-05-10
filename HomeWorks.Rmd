@@ -92,10 +92,6 @@ Homework 2 {.storyboard}
 ### A)erdosRenyi Graph With Direction
 
 ``` {r}
-erdosRenyiGraphWithDirectionInputDegree
-``` 
-
-``` {r}
 drawGraph(erdosRenyiGraphWithDirection, homework1Layout)
 ```
 
@@ -108,7 +104,7 @@ drawGraph(erdosRenyiGraphWithDirectionTransposed, homework1Layout)
 
 ### C)Subdivision Graph
 ```{r}
-drawGraph(subdivisionGraph, layout.fruchterman.reingold(subdivisionGraph))
+drawGraph(subdivisionGraph, layout.auto(subdivisionGraph))
 ```
 
 ***
@@ -119,7 +115,8 @@ E(subdivisionGraph)
 
 ### D)Hamiltonian Cycle
 ```{r}
-
+hamiltonianEdges
+drawGraph(hamiltonianGraph, homework1Layout)
 ```
 
 ### E)Adjecency Matrix
@@ -154,23 +151,27 @@ Homework 3 {.storyboard}
 ===
 
 
-### A)
+### A)erdosRenyi Graph With Direction and wieght
 ```{r}
 headCollection
-plot(erdosRenyiGraphWithDirectionAndWeighted, edge.arrow.size=.3, layout = homework1Layout)
-
+#plot(erdosRenyiGraphWithDirectionAndWeighted, edge.arrow.size=.3, layout = homework1Layout)
+drawGraph(erdosRenyiGraphWithDirectionAndWeighted, homework1Layout)
 ```
 
 ### B)subGraph
 
 ```{r}
-plot(subEderdosRenyiGraphWithDirectionAndWeighted, edge.label=E(subEderdosRenyiGraphWithDirectionAndWeighted)$label, edge.arrow.size=.3, layout = homework1Layout)
+drawGraph(subEderdosRenyiGraphWithDirectionAndWeighted,homework1Layout)
+headCollectionOfSubGraph
+#plot(subEderdosRenyiGraphWithDirectionAndWeighted, edge.arrow.size=.3, layout = homework1Layout)
 
 ```
 
 ### C)MST
 
 ```{r}
+headCollectionOfMST
+#plot(MSTOfErdosRenyiGraphWithDirectionAndWeighted, edge.arrow.size=.3, layout = homework1Layout)
 drawGraph(MSTOfErdosRenyiGraphWithDirectionAndWeighted, homework1Layout)
 ```
 
