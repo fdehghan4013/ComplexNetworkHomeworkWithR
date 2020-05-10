@@ -64,5 +64,5 @@ for (e in E(MSTOfErdosRenyiGraphWithDirectionAndWeighted)) {
 # Eccentricity
 eccentricityerdosRenyiGraphWithDirectionAndWeighted <- eccentricity(erdosRenyiGraphWithDirectionAndWeighted)
 radiuserdosRenyiGraphWithDirectionAndWeighted <- radius(erdosRenyiGraphWithDirectionAndWeighted)
-diametererdosRenyiGraphWithDirectionAndWeighted <- diameter(erdosRenyiGraphWithDirectionAndWeighted, directed=FALSE)
+diametererdosRenyiGraphWithDirectionAndWeighted <- diameter(erdosRenyiGraphWithDirectionAndWeighted )
 girtherdosRenyiGraphWithDirectionAndWeighted <- girth(erdosRenyiGraphWithDirectionAndWeighted)
