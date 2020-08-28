@@ -33,7 +33,7 @@ density <- edge_density(erdosRenyiGraph)
 collectionOfVwithDegreeMoreThan3 <- numeric()
 removedV <- numeric()
 
-for (i in 1:length(erdosRenyiGraphDegree)) {
+for (i in seq_along(erdosRenyiGraphDegree)) {
   if (erdosRenyiGraphDegree[i] >= 3) collectionOfVwithDegreeMoreThan3 <- c(collectionOfVwithDegreeMoreThan3, i)
   else removedV <- c(removedV, i)
 }
@@ -46,3 +46,20 @@ homework1InducedGraphLayout <- homework1Layout
 if (length(removedV) != 0) {
   homework1InducedGraphLayout <- homework1Layout[-as.numeric(removedV),]
 }
+
+
+# degree's avarage
+degreeAvarage <- (2 * (E(erdosRenyiGraph) %>% length()))/n
+
+# avarage of pathes length
+avarageShortestPaths <- mean_distance(erdosRenyiGraph, FALSE, FALSE)
+
+# edge's avarage
+edgesAvarage <- (E(erdosRenyiGraph) %>% length())/n
+
+# clustering coefficient
+localClusteringCoefficient <- transitivity(erdosRenyiGraph, type = "localundirected")
+localClusteringCoefficientAvarage <- transitivity(erdosRenyiGraph, type = "localaverageundirected")
+globalClusteringCoefficient <- transitivity(erdosRenyiGraph, type = "globalundirected")
+
+

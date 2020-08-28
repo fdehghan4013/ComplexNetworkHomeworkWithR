@@ -13,6 +13,7 @@ source(file = "./scripts/pre_needed_functions.R")
 source(file = "./scripts/homework1.R")
 source(file = "./scripts/homework2.R")
 source(file = "./scripts/homework3.R")
+source(file = "./scripts/homework3_2.R")
 source(file = "./scripts/homework4.R")
 ```
 
@@ -85,6 +86,29 @@ density
 drawGraph(inducedErdosRenyiGraph, homework1InducedGraphLayout)
 ```
 
+### H)degree, pathesLength, edge avarage
+degree's average
+``` {r}
+degreeAvarage
+```
+avarage of pathes length
+``` {r}
+avarageShortestPaths
+```
+edge's avarage
+``` {r}
+edgesAvarage
+```
+
+### I)clustering coefficient
+local clustering coefficient
+``` {r}
+localClusteringCoefficient
+```
+global clustering coefficient
+``` {r}
+globalClusteringCoefficient
+```
 
 Homework 2 {.storyboard}
 ===
@@ -115,8 +139,8 @@ E(subdivisionGraph)
 
 ### D)Hamiltonian Cycle
 ```{r}
-hamiltonianEdges
-drawGraph(hamiltonianGraph, homework1Layout)
+#hamiltonianEdges
+#drawGraph(hamiltonianGraph, homework1Layout)
 ```
 
 ### E)Adjecency Matrix
@@ -147,6 +171,28 @@ girthErdosReyniGraphWithDirection
 drawGraph(inducedErdosRenyiGraphWithDirection, homework2InducedGraphLayout)
 ```
 
+### H)degree, pathesLength, edge avarage
+degree's average
+``` {r}
+degreeAvarageDirected
+```
+avarage of pathes length
+``` {r}
+avarageShortestPathsDirected
+```
+edge's avarage
+``` {r}
+edgesAvarageDirected
+```
+### I)clustering coefficient
+local clustering coefficient
+``` {r}
+localClusteringCoefficientDirected
+```
+global clustering coefficient
+``` {r}
+globalClusteringCoefficientDirected
+```
 Homework 3 {.storyboard}
 ===
 
@@ -194,6 +240,31 @@ Girth
 girtherdosRenyiGraphWithDirectionAndWeighted
 ``` 
 
+
+### E)degree, pathesLength, edge avarage
+degree's average
+``` {r}
+degreeAvarageDirectedWithWeight
+```
+avarage of pathes length
+``` {r}
+avarageShortestPathsDirectedWithWeight
+```
+edge's avarage
+``` {r}
+edgesAvarageDirectedWithWeight
+```
+
+### F)clustering coefficient
+local clustering coefficient
+``` {r}
+localClusteringCoefficientDirectedWithWeight
+```
+global clustering coefficient
+``` {r}
+globalClusteringCoefficientDirectedWithWeight
+```
+
 Homework 4 {.storyboard}
 ===
 
@@ -203,3 +274,66 @@ Homework 4 {.storyboard}
 drawGraph(multiGraph, homework1Layout) 
 ```
 
+
+### B)degree, pathesLength, edge avarage
+degree's average
+``` {r}
+degreeAvarageMultiGraph
+```
+avarage of pathes length
+``` {r}
+avarageShortestPathsMultiGraph
+```
+edge's avarage
+``` {r}
+edgesAvarageMultiGraph
+```
+
+### C)clustering coefficient
+local clustering coefficient
+``` {r}
+localClusteringCoefficientMultiGraph
+```
+global clustering coefficient
+``` {r}
+globalClusteringCoefficientMultiGraph
+```
+
+Homework 5 {.storyboard}
+===
+
+### A) Watts Strogatz Graph With 30 Node
+
+```{r}
+drawGraph(wattzStrogatzGraph, homework1Layout) 
+```
+
+
+### B)degree, pathesLength, edge avarage
+degree's average
+``` {r}
+#degreeAvarageWattzStrogatzGraph
+```
+avarage of pathes length
+``` {r}
+#avarageShortestPathsWattzStrogatzGraph
+```
+edge's avarage
+``` {r}
+#edgesAvarageWattzStrogatzGraph
+```
+
+### C)clustering coefficient
+local clustering coefficient
+``` {r}
+#localClusteringCoefficientWattzStrogatzGraph
+```
+global clustering coefficient
+``` {r}
+#globalClusteringCoefficientWattzStrogatzGraph
+```
+### D) Watts Strogatz Graph With 300 Node
+
+```{r}
+drawGraph(wattzStrogatzGraphWith300Node, homework1Layout) 
+```

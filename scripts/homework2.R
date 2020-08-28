@@ -40,7 +40,7 @@ girthErdosReyniGraphWithDirection <- girth(erdosRenyiGraphWithDirection)
 collectionOfVwithDegreeMoreThan2 <- numeric()
 removedV <- numeric()
 
-for (i in 1:length(erdosRenyiGraphWithDirectionInputDegree)) {
+for (i in seq_along(erdosRenyiGraphWithDirectionInputDegree)) {
   if (erdosRenyiGraphWithDirectionInputDegree[i] >= 2) collectionOfVwithDegreeMoreThan2 <- c(collectionOfVwithDegreeMoreThan2, i)
   else removedV <- c(removedV, i)
 }
@@ -54,16 +54,30 @@ if (length(removedV) != 0) {
 }
 
 #hamilton cycle
-erdosRenyiGraphWithDirectionEdges <- numeric()
-for (e in E(erdosRenyiGraphWithDirection)) {
-  erdosRenyiGraphWithDirectionEdges <- erdosRenyiGraphWithDirectionEdges %>% 
-    c(
-      V(erdosRenyiGraphWithDirection)[get.edgelist(erdosRenyiGraphWithDirection)[e,]][1], 
-      V(erdosRenyiGraphWithDirection)[get.edgelist(erdosRenyiGraphWithDirection)[e,]][2]
-    )
-}
+#erdosRenyiGraphWithDirectionEdges <- numeric()
+#for (e in E(erdosRenyiGraphWithDirection)) {
+#  erdosRenyiGraphWithDirectionEdges <- erdosRenyiGraphWithDirectionEdges %>% 
+#    c(
+#      V(erdosRenyiGraphWithDirection)[get.edgelist(erdosRenyiGraphWithDirection)[e,]][1], 
+#      V(erdosRenyiGraphWithDirection)[get.edgelist(erdosRenyiGraphWithDirection)[e,]][2]
+#    )
+#}
 
-hamiltonianGraph <- erdosRenyiGraphWithDirection
-hamiltonianEdges <- hamiltonian(erdosRenyiGraphWithDirectionEdges, cycle=TRUE)
+#hamiltonianGraph <- erdosRenyiGraphWithDirection
+#hamiltonianEdges <- hamiltonian(erdosRenyiGraphWithDirectionEdges, cycle=TRUE)
 
+
+# degree's avarage
+degreeAvarageDirected <- (E(erdosRenyiGraphWithDirection) %>% length())/n
+
+# avarage of pathes length
+avarageShortestPathsDirected <- mean_distance(erdosRenyiGraphWithDirection, TRUE, FALSE)
+
+# edge's avarage
+edgesAvarageDirected <- (E(erdosRenyiGraphWithDirection) %>% length())/n
+
+# clustering coefficient
+localClusteringCoefficientDirected <- transitivity(erdosRenyiGraphWithDirection, type = "local")
+localClusteringCoefficientDirectedAvarage <- transitivity(erdosRenyiGraph, type = "localaverage")
+globalClusteringCoefficientDirected <- transitivity(erdosRenyiGraphWithDirection, type = "global")
 

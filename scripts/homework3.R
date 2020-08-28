@@ -24,15 +24,15 @@ removedV <- numeric()
 for (e in E(erdosRenyiGraphWithDirectionAndWeighted)) {
   if (E(erdosRenyiGraphWithDirectionAndWeighted)[e]$weight < 30) {
     collectionOfEwithWeightLessThan30 <- collectionOfEwithWeightLessThan30 %>% c(
-      V(erdosRenyiGraphWithDirectionAndWeighted)[get.edgelist(erdosRenyiGraphWithDirectionAndWeighted)[e,]][1], 
+      V(erdosRenyiGraphWithDirectionAndWeighted)[get.edgelist(erdosRenyiGraphWithDirectionAndWeighted)[e,]][1],
       V(erdosRenyiGraphWithDirectionAndWeighted)[get.edgelist(erdosRenyiGraphWithDirectionAndWeighted)[e,]][2]
     )
     newWeights <- newWeights %>% c(E(erdosRenyiGraphWithDirectionAndWeighted)[e]$weight)
   }
-    
+
 }
-subEderdosRenyiGraphWithDirectionAndWeighted <- erdosRenyiGraphWithDirectionAndWeighted %>% 
-  delete_edges(E(erdosRenyiGraphWithDirectionAndWeighted)) %>% 
+subEderdosRenyiGraphWithDirectionAndWeighted <- erdosRenyiGraphWithDirectionAndWeighted %>%
+  delete_edges(E(erdosRenyiGraphWithDirectionAndWeighted)) %>%
   add_edges(collectionOfEwithWeightLessThan30)
 #E(subEderdosRenyiGraphWithDirectionAndWeighted)$label <- newWeights
 E(subEderdosRenyiGraphWithDirectionAndWeighted)$weight <- newWeights
@@ -66,3 +66,18 @@ eccentricityerdosRenyiGraphWithDirectionAndWeighted <- eccentricity(erdosRenyiGr
 radiuserdosRenyiGraphWithDirectionAndWeighted <- radius(erdosRenyiGraphWithDirectionAndWeighted)
 diametererdosRenyiGraphWithDirectionAndWeighted <- diameter(erdosRenyiGraphWithDirectionAndWeighted )
 girtherdosRenyiGraphWithDirectionAndWeighted <- girth(erdosRenyiGraphWithDirectionAndWeighted)
+
+
+# degree's avarage
+degreeAvarageDirectedWithWeight <- (weights %>% sum())/n
+
+# avarage of pathes length
+avarageShortestPathsDirectedWithWeight <- mean_distance(erdosRenyiGraphWithDirectionAndWeighted, TRUE, FALSE)
+
+# edge's avarage
+edgesAvarageDirectedWithWeight <- (E(erdosRenyiGraphWithDirectionAndWeighted) %>% length())/n
+
+# clustering coefficient
+localClusteringCoefficientDirectedWithWeight <- transitivity(erdosRenyiGraphWithDirectionAndWeighted, type = "local", weights = weights)
+localClusteringCoefficientAvarageDirectedWithWeight <- transitivity(erdosRenyiGraphWithDirectionAndWeighted, type = "localaverage", weights = weights)
+globalClusteringCoefficientDirectedWithWeight <- transitivity(erdosRenyiGraphWithDirectionAndWeighted, type = "global", weights = weights)

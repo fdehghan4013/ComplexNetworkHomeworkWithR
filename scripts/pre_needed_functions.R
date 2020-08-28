@@ -1,5 +1,7 @@
 library(igraph)
+#library(qgraph)
 library(adagio)
+library(zoom)
 
 # some useful functions
 
