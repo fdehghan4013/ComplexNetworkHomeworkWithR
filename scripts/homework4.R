@@ -13,5 +13,6 @@ edgesAvarageMultiGraph <- (E(multiGraph) %>% length())/n
 
 # clustering coefficient
 localClusteringCoefficientMultiGraph <- transitivity(multiGraph, type = "localundirected")
+localClusteringCoefficientMultiGraphAvarage <- transitivity(multiGraph, type = "localaverageundirected")
 globalClusteringCoefficientMultiGraph <- transitivity(multiGraph, type = "globalundirected")
 

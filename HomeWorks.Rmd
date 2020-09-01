@@ -13,8 +13,10 @@ source(file = "./scripts/pre_needed_functions.R")
 source(file = "./scripts/homework1.R")
 source(file = "./scripts/homework2.R")
 source(file = "./scripts/homework3.R")
-source(file = "./scripts/homework3_2.R")
+source(file = "./scripts/homework5.R")
 source(file = "./scripts/homework4.R")
+source(file = "./scripts/homework6.R")
+source(file = "./scripts/homework7.R")
 ```
 
 Homework 1 {.storyboard}
@@ -32,7 +34,7 @@ drawGraph(complementeryGraph, homework1Layout)
 ```
 
 
-### C) Adjecency Materix
+### C) Adjacency Matrix
 Matrix
 ```{r}
 erdosRenyiMatrix
@@ -105,6 +107,11 @@ local clustering coefficient
 ``` {r}
 localClusteringCoefficient
 ```
+local Clustering Coefficient Avarage
+```{r}
+localClusteringCoefficientAvarage
+```
+
 global clustering coefficient
 ``` {r}
 globalClusteringCoefficient
@@ -139,8 +146,8 @@ E(subdivisionGraph)
 
 ### D)Hamiltonian Cycle
 ```{r}
-#hamiltonianEdges
-#drawGraph(hamiltonianGraph, homework1Layout)
+hamiltonianEdges
+drawGraph(hamiltonianGraph, homework1Layout)
 ```
 
 ### E)Adjecency Matrix
@@ -189,6 +196,11 @@ local clustering coefficient
 ``` {r}
 localClusteringCoefficientDirected
 ```
+local Clustering Coefficient Avarage
+```{r}
+localClusteringCoefficientDirectedAvarage
+```
+
 global clustering coefficient
 ``` {r}
 globalClusteringCoefficientDirected
@@ -260,6 +272,10 @@ local clustering coefficient
 ``` {r}
 localClusteringCoefficientDirectedWithWeight
 ```
+local Clustering Coefficient Avarage
+```{r}
+localClusteringCoefficientAvarageDirectedWithWeight
+```
 global clustering coefficient
 ``` {r}
 globalClusteringCoefficientDirectedWithWeight
@@ -294,6 +310,11 @@ local clustering coefficient
 ``` {r}
 localClusteringCoefficientMultiGraph
 ```
+
+local Clustering Coefficient Avarage
+```{r}
+localClusteringCoefficientMultiGraphAvarage
+```
 global clustering coefficient
 ``` {r}
 globalClusteringCoefficientMultiGraph
@@ -302,38 +323,171 @@ globalClusteringCoefficientMultiGraph
 Homework 5 {.storyboard}
 ===
 
-### A) Watts Strogatz Graph With 30 Node
+### A.1) Watts Strogatz Graph With 30 Node
 
 ```{r}
-drawGraph(wattzStrogatzGraph, homework1Layout) 
+#drawGraph(wattzStrogatzGraph, homework1Layout) 
+plot.igraph(wattzStrogatzGraph, layout = layout.fruchterman.reingold(wattzStrogatzGraph), arrow.size=.001, vertex.size=3, vertex.label = NA)
 ```
 
 
-### B)degree, pathesLength, edge avarage
+### A.2)degree, pathesLength, edge avarage
 degree's average
 ``` {r}
-#degreeAvarageWattzStrogatzGraph
+degreeAvarageWattzStrogatzGraph
 ```
 avarage of pathes length
 ``` {r}
-#avarageShortestPathsWattzStrogatzGraph
+avarageShortestPathsWattzStrogatzGraph
 ```
 edge's avarage
 ``` {r}
-#edgesAvarageWattzStrogatzGraph
+edgesAvarageWattzStrogatzGraph
 ```
 
-### C)clustering coefficient
+### A.3)clustering coefficient
 local clustering coefficient
 ``` {r}
-#localClusteringCoefficientWattzStrogatzGraph
+localClusteringCoefficientWattzStrogatzGraph
+```
+
+local Clustering Coefficient Avarage
+```{r}
+localClusteringCoefficientAverageWattzStrogatzGraph
 ```
 global clustering coefficient
 ``` {r}
-#globalClusteringCoefficientWattzStrogatzGraph
+globalClusteringCoefficientWattzStrogatzGraph
 ```
-### D) Watts Strogatz Graph With 300 Node
+### B.1) Watts Strogatz Graph With 1000 Node
 
 ```{r}
-drawGraph(wattzStrogatzGraphWith300Node, homework1Layout) 
+plot.igraph(wattzStrogatzGraphWith1000Node, layout = layout.reingold.tilford(wattzStrogatzGraphWith1000Node), vertex.size=3,vertex.label=NA)
 ```
+
+
+### B.2)degree, pathesLength, edge avarage
+degree's average
+``` {r}
+degreeAvarageWattzStrogatzGraphWith1000Node
+```
+avarage of pathes length
+``` {r}
+avarageShortestPathsWattzStrogatzGraphWith1000Node
+```
+edge's avarage
+``` {r}
+edgesAvarageWattzStrogatzGraphWith1000Node
+```
+
+### B.3)clustering coefficient
+
+local Clustering Coefficient Avarage
+```{r}
+localClusteringCoefficientAverageWattzStrogatzGraphWith1000Node
+```
+global clustering coefficient
+``` {r}
+globalClusteringCoefficientWattzStrogatzGraphWith1000Node
+```
+
+### C.1) Watts Strogatz Graph With 10000 Nodes (Zoomed)
+
+```{r}
+#plot.igraph(wattzStrogatzGraphWith10000Node, layout = layout.fruchterman.reingold(wattzStrogatzGraphWith10000Node), arrow.size=.001, vertex.size=.01, vertex.label = NA)
+```
+```{r pressure, echo=FALSE, fig.height=20, fig.width=64, message=FALSE, warning=FALSE}
+plot(wattzStrogatzGraphWith10000Node, vertex.size=.1, ylim=c(0,10), xlim = c(0, 10),vertex.label=NA, asp = 0,rescale=FALSE)
+```
+
+### C.2) Watts Strogatz Graph With 10000 Nodes
+
+```{r}
+plot.igraph(wattzStrogatzGraphWith10000Node, layout = layout.reingold.tilford(wattzStrogatzGraphWith10000Node), arrow.size=.001, vertex.size=.01, vertex.label = NA)
+```
+
+### C.3)degree, pathesLength, edge avarage
+degree's average
+``` {r}
+degreeAvarageWattzStrogatzGraphWith10000Node
+```
+avarage of pathes length
+``` {r}
+avarageShortestPathsWattzStrogatzGraphWith10000Node
+```
+edge's avarage
+``` {r}
+edgesAvarageWattzStrogatzGraphWith10000Node
+```
+
+### C.3)clustering coefficient
+
+local Clustering Coefficient Avarage
+```{r}
+localClusteringCoefficientAverageWattzStrogatzGraphWith10000Node
+```
+global clustering coefficient
+``` {r}
+globalClusteringCoefficientWattzStrogatzGraphWith10000Node
+```
+Homework 6 {.storyboard}
+===
+
+### A.1) Snobbish Complex Network With 60 Node
+```{r}
+plot.igraph(snobbishComplexNetworkGraph(30, 0.5, 0), vertex.size=5, vertex.label = NA)
+```
+
+### A.2)degree avarage, Histogram
+degree's average
+``` {r}
+degreeAvarageSnobbishComplexNetworkWith60Node
+```
+Histogram
+``` {r}
+hist(snobbishWith60NodeDegree)
+```
+
+### B.1)blue subgraph
+blueGraph
+```{r}
+plot.igraph(blueGraph, vertex.size=3, vertex.label = NA)
+```
+
+### B.2)blue subgraph degree
+degree's average
+``` {r}
+blueGraphAvarageDegree
+```
+Histogram
+``` {r}
+hist(blueGraphDegree)
+```
+
+### C.1) Snobbish Complex Network With 600 Node
+```{r}
+#plot.igraph(snobbishComplexNetworkGraphConnected(300, 0.5), vertex.size=5, vertex.label = NA)
+#plot.igraph(snobbishComplexNetworkGraphConnectedWith600Node, vertex.size=5, vertex.label = NA, edge.size=.1)
+plot.igraph(snobbishComplexNetworkGraphConnectedWith600Node, layout = layout_with_mds(snobbishComplexNetworkGraphConnectedWith600Node), arrow.size=.001, vertex.size=2.3,edge.size=.0001, vertex.label = NA)
+```
+
+### C.2)degree average, Histogram
+degree's average
+``` {r}
+degreeAvarageSnobbishComplexNetworkWith600Node
+```
+Histogram
+``` {r}
+hist(snobbishComplexNetworkGraphConnectedWith600NodeDegree)
+```
+
+Homework 7 {.storyboard}
+===
+
+### A.1)Barabasi Albert Graph
+
+```{r}
+plot.igraph(BarabasiAlbertGraph, vertex.size=5, vertex.label = NA, edge.size=.1,layout = layout.fruchterman.reingold(BarabasiAlbertGraph))
+```
+
+

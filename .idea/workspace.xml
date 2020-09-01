@@ -20,11 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbc6b9b6-ae47-4fde-b7e1-742999d4dc76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/rMarkdownGraphicsSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/homework7.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rGraphicsSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rGraphicsSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWorks.Rmd" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWorks.Rmd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWorks.html" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWorks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/homework1.R" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/homework1.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/6.R" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/homework6.R" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/homework2.R" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/homework2.R" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/homework3.R" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/homework3.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/homework3_2.R" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/homework5.R" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/homework4.R" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/homework4.R" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/pre_needed_functions.R" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pre_needed_functions.R" afterDir="false" />
     </list>
@@ -38,6 +43,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="R Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,11 +81,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -82,11 +96,16 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="scala_project_settings_configurable.last_selected_tab_index" value="2" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.r.configuration.RSettingsProjectConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\homework1\scripts" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -113,7 +132,13 @@
       <workItem from="1598471968530" duration="1841000" />
       <workItem from="1598473839242" duration="1907000" />
       <workItem from="1598644044638" duration="18000" />
-      <workItem from="1598644075401" duration="7350000" />
+      <workItem from="1598644075401" duration="7791000" />
+      <workItem from="1598685522368" duration="1465000" />
+      <workItem from="1598728699544" duration="5196000" />
+      <workItem from="1598902190964" duration="1599000" />
+      <workItem from="1598904486888" duration="3982000" />
+      <workItem from="1598987667559" duration="903000" />
+      <workItem from="1598988694635" duration="10436000" />
     </task>
     <servers />
   </component>
@@ -122,6 +147,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -140,10 +175,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1598644659953" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1598469662362">
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1598996973611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598469662362" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598996973611" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1598685786862">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598685786862" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1598651801129">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -152,10 +191,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598645468305" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598648200877">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598905146751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598648200877" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598905146751" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="the-r-line">
+          <url>file://$PROJECT_DIR$/scripts/homework6.R</url>
+          <line>54</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="the-r-line">
+          <url>file://$PROJECT_DIR$/scripts/homework6.R</url>
+          <line>45</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

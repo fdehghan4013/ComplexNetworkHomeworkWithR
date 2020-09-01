@@ -54,17 +54,17 @@ if (length(removedV) != 0) {
 }
 
 #hamilton cycle
-#erdosRenyiGraphWithDirectionEdges <- numeric()
-#for (e in E(erdosRenyiGraphWithDirection)) {
-#  erdosRenyiGraphWithDirectionEdges <- erdosRenyiGraphWithDirectionEdges %>% 
-#    c(
-#      V(erdosRenyiGraphWithDirection)[get.edgelist(erdosRenyiGraphWithDirection)[e,]][1], 
-#      V(erdosRenyiGraphWithDirection)[get.edgelist(erdosRenyiGraphWithDirection)[e,]][2]
-#    )
-#}
+erdosRenyiGraphWithDirectionEdges <- numeric()
+for (e in E(erdosRenyiGraphWithDirection)) {
+  erdosRenyiGraphWithDirectionEdges <- erdosRenyiGraphWithDirectionEdges %>%
+    c(
+      V(erdosRenyiGraphWithDirection)[get.edgelist(erdosRenyiGraphWithDirection)[e,]][1],
+      V(erdosRenyiGraphWithDirection)[get.edgelist(erdosRenyiGraphWithDirection)[e,]][2]
+    )
+}
 
-#hamiltonianGraph <- erdosRenyiGraphWithDirection
-#hamiltonianEdges <- hamiltonian(erdosRenyiGraphWithDirectionEdges, cycle=TRUE)
+hamiltonianGraph <- erdosRenyiGraphWithDirection
+hamiltonianEdges <- hamiltonian(erdosRenyiGraphWithDirectionEdges, cycle=TRUE)
 
 
 # degree's avarage
